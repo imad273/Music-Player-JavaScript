@@ -1,0 +1,57 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    height: 70vh;
+    width: 400px;
+    margin: 0px 20px;
+    border-radius: 7px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.content .image img{
+    margin-top: 35px;
+    width: 210px;
+    height: 270px;
+    border-radius: 7px;
+}
+.content .info{
+    margin-top: 5px;
+    text-align: center;
+    color: rgb(31, 31, 31);
+    font-size: 18px;
+}
+.content .info p{
+    color: rgb(49, 49, 49);
+    font-size: 14px;
+}
+.content .control{
+    margin-top: 30px;
+}
+.content .control i{
+    font-size: 30px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        height: 80vh;
+    }
+}
