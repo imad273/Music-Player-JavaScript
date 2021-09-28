@@ -1,0 +1,17 @@
+[
+   {
+      "sound": "sounds/streets.mp3",
+      "img": "images/streets.jpg",
+      "title": "Streets"
+   },
+   {
+      "sound": "sounds/say-so.mp3",
+      "img": "images/say-so.png",
+      "title": "Say So"
+   },
+   {
+      "sound": "sounds/kiss-me.mp3",
+      "img": "images/kiss-me.jpg",
+      "title": "Kiss Me"
+   }
+]
