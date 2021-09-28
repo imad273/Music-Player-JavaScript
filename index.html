@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
     <title>Music Player</title>
 </head>
 <body>
+    
     <section class="hero">
+        <div class="object"></div>
+        <div class="object-2"></div>
         <div class="content">
             <div class="image">
                 <img src="" id="img">
@@ -24,9 +26,15 @@
             </div>
             <audio id="music" src=""></audio>
             <div class="control">
-                <i class="fas fa-chevron-circle-left" id="prev"></i>
-                <i class="fas fa-play" id="btn"></i>
-                <i class="fas fa-chevron-circle-right" id="next"></i>
+                <div class="icn">
+                    <i class='bx bx-skip-previous' id="prev"></i>
+                </div>
+                <div class="icn">
+                    <i class='bx bx-play' id="btn"></i>
+                </div>
+                <div class="icn">
+                    <i class='bx bx-skip-next' id="next"></i>
+                </div>
             </div>
         </div>
     </section>

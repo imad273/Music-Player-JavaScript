@@ -14,7 +14,6 @@ fetch("js/sounds.json").then((response) => {
         title.innerHTML = data.title;
         sound.src = data.sound;
         image.src = data.img;
-        
     }
 
     showSong(data[index]);
@@ -24,12 +23,12 @@ fetch("js/sounds.json").then((response) => {
             index = 0;
             showSong(data[index]);
             sound.play();
-            btn.className = "fas fa-pause";
+            btn.className = "bx bx-pause";
         } else {
             index++;
             showSong(data[index]);
             sound.play();
-            btn.className = "fas fa-pause";
+            btn.className = "bx bx-pause";
         }
     })
 
@@ -38,12 +37,12 @@ fetch("js/sounds.json").then((response) => {
             index = data.length - 1;
             showSong(data[index]);
             sound.play();
-            btn.className = "fas fa-pause";
+            btn.className = "bx bx-pause";
         } else {
             index--;
             showSong(data[index]);
             sound.play();
-            btn.className = "fas fa-pause";
+            btn.className = "bx bx-pause";
         }
     })
 
@@ -51,13 +50,10 @@ fetch("js/sounds.json").then((response) => {
     btn.addEventListener("click", () => {
         if(sound.paused){
             sound.play();
-            btn.className = "fas fa-pause";
+            btn.className = "bx bx-pause";
         } else {
             sound.pause();
-            btn.className = "fas fa-play";
+            btn.className = "bx bx-play";
         }
     })
 }) 
-
-
-

@@ -2,56 +2,109 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
 }
 body{
-    background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background-color: #ff1170;
+    overflow: hidden;
 }
+
 .hero{
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    
 }
-
-.content{
+.object, .object-2 {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 50%;
+    height: 70%;
+    background-color: #FEA22B;
+    filter: blur(85px);
+    -webkit-filter: blur(85px);
+    -o-filter: blur(85px);
+    z-index: -1;
+}
+.object {
+    top: -120px;
+    left: -250px;
+}
+.object-2 {
+    bottom: -120px;
+    right: -250px;
+}
+.content {
+    width: 40%;
+    height: 80vh;
+    background-color: #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: #eee;
-    height: 70vh;
-    width: 400px;
-    margin: 0px 20px;
-    border-radius: 7px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}
-.content .image img{
-    margin-top: 35px;
-    width: 210px;
-    height: 270px;
-    border-radius: 7px;
-}
-.content .info{
-    margin-top: 5px;
+    flex-direction: column;
     text-align: center;
-    color: rgb(31, 31, 31);
-    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
 }
-.content .info p{
-    color: rgb(49, 49, 49);
-    font-size: 14px;
+.content .image {
+    padding: 10px;
+    width: 100%;
 }
-.content .control{
-    margin-top: 30px;
+.content img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 15px;
 }
-.content .control i{
+.info #title{
     font-size: 30px;
-    margin: 10px;
+}
+.info p {
+    margin-top: 4px;
+    color: #333;
+}
+.control {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.control .icn {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ff1170;
+    border-radius: 50%;
+}
+.control i {
+    font-size: 38px;
+    padding: 5px;
+    color: #fff;
 }
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 800px){
+    .content {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .object, .object-2 {
+        width: 70%;
+    }
+    .object {
+        left: -50px;
+        top: -150px; 
+    }
+    .object-2 {
+        bottom: -150px;
+        right: 0px;
+    }
     .content{
-        height: 80vh;
+        width: 80%;
     }
 }
