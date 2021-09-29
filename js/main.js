@@ -1,15 +1,16 @@
-// Variable
-var sound = document.getElementById("music");
-var btn = document.getElementById("btn");
-var next = document.getElementById("next");
-var prev = document.getElementById("prev");
-var image = document.getElementById("img");
+// Variables
+let sound = document.getElementById("music");
+let btn = document.getElementById("btn");
+let next = document.getElementById("next");
+let prev = document.getElementById("prev");
+let image = document.getElementById("img");
 
 fetch("js/sounds.json").then((response) => {
     return response.json();
 }).then((data) => {
     var index = 0;
 
+    // Show The Song
     function showSong(data) {
         title.innerHTML = data.title;
         sound.src = data.sound;
@@ -18,7 +19,8 @@ fetch("js/sounds.json").then((response) => {
 
     showSong(data[index]);
 
-    next.addEventListener("click", () => {
+    // Next Sound Function
+    next.addEventListener('click', () => {
         if (index === data.length - 1) {
             index = 0;
             showSong(data[index]);
@@ -32,7 +34,8 @@ fetch("js/sounds.json").then((response) => {
         }
     })
 
-    prev.addEventListener("click", () => {
+    // Previous Sound Function
+    prev.addEventListener('click', () => {
         if(index === 0) {
             index = data.length - 1;
             showSong(data[index]);
@@ -47,7 +50,7 @@ fetch("js/sounds.json").then((response) => {
     })
 
     // Play And Pause Music Button
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
         if(sound.paused){
             sound.play();
             btn.className = "bx bx-pause";
