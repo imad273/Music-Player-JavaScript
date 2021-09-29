@@ -50,13 +50,13 @@ fetch("js/sounds.json").then((response) => {
     })
 
     // Play And Pause Music Button
-    btn.addEventListener('click', () => {
+    playbtn.addEventListener('click', () => {
         if(sound.paused){
             sound.play();
-            btn.className = "bx bx-pause";
+            playbtn.className = "bx bx-pause";
         } else {
             sound.pause();
-            btn.className = "bx bx-play";
+            playbtn.className = "bx bx-play";
         }
     })
 }) 
