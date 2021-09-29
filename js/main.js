@@ -1,6 +1,6 @@
 // Variables
 let sound = document.getElementById("music");
-let btn = document.getElementById("btn");
+let playbtn = document.getElementById("btn");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 let image = document.getElementById("img");
@@ -25,12 +25,12 @@ fetch("js/sounds.json").then((response) => {
             index = 0;
             showSong(data[index]);
             sound.play();
-            btn.className = "bx bx-pause";
+            playbtn.className = "bx bx-pause";
         } else {
             index++;
             showSong(data[index]);
             sound.play();
-            btn.className = "bx bx-pause";
+            playbtn.className = "bx bx-pause";
         }
     })
 
@@ -40,12 +40,12 @@ fetch("js/sounds.json").then((response) => {
             index = data.length - 1;
             showSong(data[index]);
             sound.play();
-            btn.className = "bx bx-pause";
+            playbtn.className = "bx bx-pause";
         } else {
             index--;
             showSong(data[index]);
             sound.play();
-            btn.className = "bx bx-pause";
+            playbtn.className = "bx bx-pause";
         }
     })
 
@@ -60,3 +60,9 @@ fetch("js/sounds.json").then((response) => {
         }
     })
 }) 
+
+// Make Some Animation When Page Load
+window.addEventListener('load', () => {
+    let content = document.getElementById("content");
+    content.style.left = "0px";
+})
